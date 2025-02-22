@@ -1,0 +1,218 @@
+@use "../abstracts/" as *;
+
+.header__container {
+    padding: 20px 0;
+    display: flex;
+    @include media-breakpoint-up(xl) {
+        padding: 32px 0;
+    }
+}
+
+.header__logo {
+    max-width: 158px;
+    width: 100%;
+    display: inline-block;
+    margin-right: auto;
+}
+
+.header__menu-button {
+    display: inline-block;
+    height: 26px;
+    width: 26px;
+    margin-left: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    padding: 0;
+    position: relative;
+
+    &--active {
+        .header__menu-icon {
+            background-color: transparent;
+
+            &:before {
+                top: 0;
+                transform: rotate(45deg);
+            }
+
+            &:after {
+                bottom: 0;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+    @include media-breakpoint-up(xl) {
+        display: none;
+    }
+}
+
+.header__menu-icon {
+    display: block;
+    width: 26px;
+    height: 16px;
+    position: relative;
+
+    &,
+    &:after,
+    &:before {
+        content: '';
+        position: absolute;
+        height: 3px;
+        background-color: $black;
+        width: 100%;
+        left: 0;
+        transition: $duration-medium $ease-in-out;
+    }
+
+    & {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &:before {
+        top: -6px;
+    }
+
+    &:after {
+        bottom: -6px;
+    }
+}
+
+.header__menu {
+    position: fixed;
+    transform: translateX(100%);
+    height: 100%;
+    width: 100%;
+    background-color: $grey-darken;
+    top: 0;
+    left: 0;
+    transition: transform $duration-medium $ease-in-out;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+
+    &--active {
+        transform: translateX(0);
+    }
+    @include media-breakpoint-up(xl){
+        position: static;
+        transform: none;
+        background-color: transparent;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 40px 0 220px;
+    }
+}
+
+.header__nav-list {
+    text-align: center;
+    margin-bottom: 20px;
+    @include media-breakpoint-up(xl) {
+        display: flex;
+        margin-bottom: 0;
+    }
+}
+
+.header__nav-item {
+    margin-bottom: 10px;
+    @include media-breakpoint-up(xl) {
+        margin-bottom: 0;
+    }
+}
+
+.header__nav-link {
+    font-size: 20px;
+    font-weight: $medium;
+    color: $white;
+    @include media-breakpoint-up(xl){
+        color: $black;
+        font-size: 16px;
+        margin-right: 40px;
+    }
+}
+
+.header__theme-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    height: 30px;
+    max-width: 48px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    transition: $duration-medium $ease-in-out;
+    background-color: $grey-main;
+    border-radius: 100px;
+
+    &--dark {
+        background-color: $black;
+
+        .header__theme-button-icon-wrap {
+            transform: translateX(15px);
+        }
+    }
+
+}
+
+.header__theme-button-icon-wrap {
+    width: 24px;
+    height: 24px;
+    background-color: $white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform $duration-medium $ease-in-out;
+
+    svg {
+        width: 15px;
+        height: 15px;
+        transition: $duration-medium $ease-in-out;
+
+        path {
+            fill: $black;
+            transition: fill $duration-medium $ease-in-out;
+        }
+    }
+}
+
+.header__search {
+    position: relative;
+}
+
+.header__search-input {
+    width: 200px;
+    height: 36px;
+    border-radius: 5px;
+    background-color: $grey-light;
+    outline: none;
+    border: none;
+    padding: 8px 25px 8px 16px;
+    @include media-breakpoint-up(xl) {
+        width: 166px;
+    }
+}
+
+.header__search-icon {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+
+    svg {
+        height: 20px;
+        width: 20px;
+    }
+    @include media-breakpoint-up(xl) {
+        svg {
+            height: 16px;
+            width: 16px;
+        }
+    }
+}

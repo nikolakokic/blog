@@ -1,0 +1,24 @@
+// ----------  helpers
+// ------------------------------------------------------------------------------
+
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts//breakpoints" as *;
+
+* {
+  box-sizing: border-box;
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+.sr-only {
+  @include visually-hidden;
+}
+
+.has-cover {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
