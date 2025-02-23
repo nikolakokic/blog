@@ -60,6 +60,9 @@ export function BlogPost({ post, index }: BlogPostProps) {
                     >
                         {post.readingTime} min read
                     </span>
+                    <span className='post__view-count'>
+                        Views: {post.viewCount}
+                    </span>
                     <Link href={`/posts/${post.id}`} className="post__link hover">
                         Read More
                     </Link>

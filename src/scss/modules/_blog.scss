@@ -87,16 +87,12 @@
     color: $grey-text;
 }
 
-.post__date {
-    display: block;
-    margin-bottom: 5px;
-    color: $manatee;
-}
-
+.post__date,
+.post__view-count,
 .post__reading-time {
-    color: $manatee;
-    margin-bottom: 5px;
     display: block;
+    margin-bottom: 5px;
+    color: $manatee;
 }
 
 .post__link {
