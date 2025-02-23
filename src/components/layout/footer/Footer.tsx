@@ -1,3 +1,4 @@
+"use client"
 import { FC, JSX } from 'react';
 import Link from 'next/link';
 
@@ -5,8 +6,10 @@ import { LinkItem } from './footer.types';
 import { categories, quickLinks } from './quic-links';
 import { NewsletterForm } from './NewsletterFrom';
 import Image from 'next/image';
+import { useTheme } from '@/context/ThemeContext';
 
 export const Footer: FC = () => {
+  const { isDarkMode } = useTheme();
   const currentYear: number = new Date().getFullYear();
 
   const renderLink = (link: LinkItem): JSX.Element => (
@@ -73,7 +76,7 @@ export const Footer: FC = () => {
           <div className="footer__brand">
             <Link href="/" className="footer__logo" aria-label="MetaBlog home">
                 <Image
-                   src="/images/logo-small.png"
+                   src={isDarkMode ? "/images/logo-small-white.png" : "/images/logo-small.png"}
                    alt="NiceBlog Logo"
                    width={48}
                    height={48}

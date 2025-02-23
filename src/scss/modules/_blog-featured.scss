@@ -24,7 +24,8 @@
 }
 
 .featured-post__content {
-    background-color: $white;
+    @include theme-transition;
+    background-color: var(--bg-primary);
     border-radius: 12px;
     padding: 20px;
     z-index: 1;
@@ -50,7 +51,8 @@
     margin: 0 10px 10px 0;
     background-color: rgba($blue-medium, 0.2);
     border-radius: 6px;
-    color: $blue-medium;
+    @include theme-transition;
+    color: var(--tags);
 }
 
 .featured-post__tag {
@@ -59,6 +61,8 @@
 
 .featured-post__title {
     margin-bottom: 25px;
+    @include theme-transition;
+    color: var(--text-primary);
 }
 
 .featured-post__reading-time {

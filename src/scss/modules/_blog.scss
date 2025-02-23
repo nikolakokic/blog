@@ -42,7 +42,8 @@
     margin: 0 10px 10px 0;
     background-color: rgba($blue-medium, 0.2);
     border-radius: 6px;
-    color: $blue-medium;
+    color: var(--tags);
+    @include theme-transition
 }
 
 .post__tag {
@@ -52,6 +53,8 @@
 .post__title {
     font-size: 20px;
     margin-bottom: 20px;
+    color: var(--text-primary);
+    @include theme-transition;
     @include media-breakpoint-up(md){
         font-size: 24px;
     }
@@ -81,4 +84,6 @@
 
 .blog__latest-title {
     margin-bottom: 30px;
+    color: var(--text-primary);
+    @include theme-transition
 }

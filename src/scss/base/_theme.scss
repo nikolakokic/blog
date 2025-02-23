@@ -1,0 +1,24 @@
+@use "../abstracts" as *;
+:root {
+    // Osnovne boje
+    --bg-primary: #{$white};
+    --text-primary: #{$black};
+    --toogle-primary: #{$grey-main};
+    --input-bg: #{$grey-light};
+    --tags: #{$blue-medium};
+    --footer: #{$athens-gray};
+    --footer-link: #{$tuna};
+    --header--menu: #{$grey-darken};
+    
+  }
+  
+  .dark {
+    --bg-primary: #{$dark};
+    --text-primary: #{$white};
+    --toogle-primary: #{$blue-medium};
+    --input-bg: #{$ebony-clay};
+    --tags: #{$white};
+    --footer: #{$mirage};
+    --footer-link: #{$white};
+    --header--menu: #{$mirage};
+  }

@@ -1,7 +1,8 @@
 @use "../abstracts/" as *;
 
 .footer {
-    background-color: $athens-gray;
+    background-color: var(--footer);
+    @include theme-transition
 }
 
 .footer__grid {
@@ -16,6 +17,8 @@
 .footer__title {
     margin-bottom: 20px;
     font-size: 20px;
+    color: var(--text-primary);
+    @include theme-transition
 }
 
 .footer__about {
@@ -42,7 +45,8 @@
 
 .footer__contact {
     font-style: normal;
-    color: $tuna;
+    color: var(--footer-link);
+    @include theme-transition;
     .footer__link {
         display: inline-block;
         margin-bottom: 5px;
@@ -54,7 +58,8 @@
 }
 
 .footer__link {
-    color: $tuna;
+    color: var(--footer-link);
+    @include theme-transition;
 }
 
 .footer__newsletter {
@@ -130,6 +135,11 @@
         display: flex;
         justify-content: space-between;
     }
+}
+
+.footer__brand-text {
+    color: var(--text-primary);
+    @include theme-transition
 }
 
 .footer__logo {

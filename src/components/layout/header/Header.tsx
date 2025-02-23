@@ -7,28 +7,20 @@ import { NAVIGATION } from './navigation-items';
 
 import { SearchIcon, SunIcon } from './icons';
 import { Button } from '@/components/common/button/Button';
+import { useTheme } from '@/context/ThemeContext';
 
 export const Header = (): JSX.Element => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
+  const { isDarkMode, toggleTheme } = useTheme();
 
-  useEffect(() => {
-    const savedTheme = localStorage.getItem('theme');
-    setIsDarkMode(savedTheme === 'dark');
-    document.documentElement.classList.toggle('dark', savedTheme === 'dark');
-  }, []);
+ 
 
   const toggleMenu = (): void => {
     setIsMenuOpen(!isMenuOpen);
     document.body.style.overflow = isMenuOpen ? 'unset' : 'hidden';
   };
 
-  const toggleTheme = (): void => {
-    const newTheme = !isDarkMode;
-    setIsDarkMode(newTheme);
-    localStorage.setItem('theme', newTheme ? 'dark' : 'light');
-    document.documentElement.classList.toggle('dark', newTheme);
-  };
+
 
   return (
     <header className="header">
@@ -36,7 +28,7 @@ export const Header = (): JSX.Element => {
         <div className="header__container">
           <Link href="/" className="header__logo" aria-label="Go to homepage">
             <Image
-              src="/images/logo.png"
+               src={isDarkMode ? "/images/logo-white.png" : "/images/logo.png"}
               alt="NiceBlog Logo"
               width={120}
               height={40}
