@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect, useRef, useState } from 'react';
 
 type IntersectionObserverHookResult = {
@@ -17,7 +19,10 @@ export function useIntersectionObserver(
     if (!currentElement) return;
 
     const observer = new IntersectionObserver(([entry]) => {
-      setIsVisible(entry.isIntersecting);
+      if (entry.isIntersecting) {
+        setIsVisible(true);
+        observer.unobserve(currentElement);
+      }
     }, options);
 
     observer.observe(currentElement);

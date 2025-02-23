@@ -1,4 +1,3 @@
-// src/components/blog/BlogGrid.tsx
 import { BlogPost as BlogPostType} from '@/types';
 import { BlogPost } from './BlogPost';
 

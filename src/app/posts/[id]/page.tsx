@@ -1,4 +1,3 @@
-// app/posts/[id]/page.tsx
 import Image from 'next/image';
 import { BlogPost } from '@/types';
 import { notFound } from 'next/navigation';
