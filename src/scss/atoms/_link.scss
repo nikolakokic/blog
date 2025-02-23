@@ -1,0 +1,22 @@
+@use "../abstracts/" as *;
+
+.cta-text {
+  color: $black;
+  background-image: linear-gradient($black, $black);
+  background-position: 0 100%;
+  background-size: 0% 1px;
+  background-repeat: no-repeat;
+  transition: $transition-medium;
+
+  &:hover {
+    background-size: 100% 1px;
+  }
+
+  &:focus {
+    outline: 1px dotted $black;
+  }
+
+  @include media-breakpoint-down(md) {
+    background-size: 100% 1px;
+  }
+}

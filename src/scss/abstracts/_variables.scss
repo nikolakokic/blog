@@ -1,0 +1,39 @@
+// ----------  variables
+// ------------------------------------------------------------------------------
+
+// Fonts
+$thin: 400;
+$medium: 600;
+$bold: 700;
+$font-default: "Nunito Sans", sans-serif;
+
+// Transition
+$duration-fast: 0.2s;
+$duration-medium: 0.3s;
+$duration-slow: 0.6s;
+$duration-extra-slow: 1s;
+$ease: ease;
+$ease-in-out: ease-in-out;
+$transition: $duration-fast $ease;
+$transition-medium: $duration-medium $ease;
+$transition-slow: $duration-slow $ease;
+
+//Colors
+$white: #fff;
+$black: #202224;
+$blue: #4880ff;
+$blue-light: #EBFBFE;
+$blue-medium: #3749A6;
+$grey: #f1f4f9;
+$grey-body: #f5f6fa;
+$grey-border: #d8d8d8;
+$grey-main: #E8E8EA;
+$grey-button: #e2eaf8;
+$grey-light: #F4F4F5;
+$grey-ease: #D5D5D5;
+$grey-regular: #979797;
+$grey-darken: 	#6c767e;
+$green: #00B69B;
+$red: #ee4b2b;
+$orange: #FD9A56;
+$yellow: #FFFF00
