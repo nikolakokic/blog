@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import { Nunito_Sans} from "next/font/google";
 import '@/scss/styles.scss';
-import { Header } from "@/components/header/Header";
+
+
+import { Header } from "@/components/layout/header/Header";
+import { Footer } from "@/components/layout/footer/Footer";
 
 const nunitoSans = Nunito_Sans({
   variable: "--font-geist-sans",
@@ -24,6 +27,7 @@ export default function RootLayout({
       <body className={`${nunitoSans.variable}`}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
