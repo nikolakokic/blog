@@ -1,6 +1,6 @@
 'use client';
 
-import { JSX, useState, useEffect } from 'react';
+import { JSX, useState} from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { NAVIGATION } from './navigation-items';
