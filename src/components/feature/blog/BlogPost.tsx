@@ -1,14 +1,22 @@
+"use client"
 import Image from 'next/image';
 import Link from 'next/link';
 import { BlogPost as BlogPostType } from '@/types';
+import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
 
 interface BlogPostProps {
     post: BlogPostType;
+    index: number;
 }
 
-export function BlogPost({ post }: BlogPostProps) {
+export function BlogPost({ post, index }: BlogPostProps) {
+    const { ref, isVisible } = useIntersectionObserver();
     return (
-        <article className="post">
+        <article ref={ref} 
+        className={`post ${isVisible ? 'post--visible' : ''}`}
+        style={{ 
+            '--delay': `${index * 0.2}s`,
+        } as React.CSSProperties}>
             <div className="post__image-container">
                 <Image
                     src={post.imageUrl}
