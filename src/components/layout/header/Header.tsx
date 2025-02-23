@@ -64,7 +64,7 @@ export const Header = (): JSX.Element => {
               <ul className="header__nav-list">
                 {NAVIGATION.map((item) => (
                   <li key={item.path} className="header__nav-item">
-                    <Link href={item.path} className="header__nav-link">
+                    <Link href={item.path} className="header__nav-link hover">
                       {item.label}
                     </Link>
                   </li>

@@ -23,7 +23,7 @@
     background: none;
     border: none;
     cursor: pointer;
-    z-index: 1;
+    z-index: 4;
     padding: 0;
     position: relative;
 
@@ -87,6 +87,7 @@
     background-color: $grey-darken;
     top: 0;
     left: 0;
+    z-index: 3;
     transition: transform $duration-medium $ease-in-out;
     display: flex;
     flex-direction: column-reverse;
@@ -138,7 +139,7 @@
     background: none;
     border: none;
     cursor: pointer;
-    z-index: 1;
+    z-index: 4;
     height: 30px;
     max-width: 48px;
     width: 100%;

@@ -1,0 +1,33 @@
+@use "../abstracts/" as *;
+
+.single-post {
+    margin-bottom: 80px;
+}
+
+.single-post__title {
+    font-size: 30px;
+    margin-bottom: 20px;
+    @include media-breakpoint-up(md) {
+        font-size: 40px;
+    }
+}
+
+.single-post__info {
+    display: block;
+    color: $manatee
+}
+
+.single-post__reading {
+    margin-left: 10px;
+}
+
+.single-post__featured-image {
+    position: relative;
+    padding-bottom: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    @include media-breakpoint-up(md) {
+        padding-bottom: 56.25%;
+    }
+}

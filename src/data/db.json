@@ -3,23 +3,22 @@
       {
         "id": 1,
         "title": "Getting Started with Next.js Development",
-        "description": "Learn the basics of Next.js and how to create your first application with this powerful React framework.",
+        "description": "Learn the basics of Next.js and how to create your first application with this powerful React framework. MAIN",
         "content": "Next.js is a powerful framework for building React applications that provides features like server-side rendering and static site generation out of the box...",
         "imageUrl": "https://picsum.photos/seed/post1/800/400",
         "publishedDate": "2024-02-22",
         "viewCount": 156,
-        "readingTime": 5,
         "tags": ["Next.js", "React", "Web Development"]
       },
       {
         "id": 2,
         "title": "Understanding TypeScript in Modern Web Development",
         "description": "Explore how TypeScript can improve your JavaScript development experience with static typing.",
-        "content": "TypeScript adds static typing to JavaScript, making it easier to catch errors early in development...",
+        "content": "TypeScript adds static typing to JavaScript, making it easier to catch errors early in development...TypeScript adds static typing to JavaScript, making it easier to catch errors early in development...TypeScript adds static typing to JavaScript, making it easier to catch errors early in development...TypeScript adds static typing to JavaScript, making it easier to catch errors early in development...TypeScript adds static typing to JavaScript, making it easier to catch errors early in development...TypeScript adds static typing to JavaScript, making it easier to catch errors early in development...TypeScript adds static typing to JavaScript, making it easier to catch errors early in development...TypeScript adds static typing to JavaScript, making it easier to catch errors early in development...TypeScript adds static typing to JavaScript, making it easier to catch errors early in development...TypeScript adds static typing to JavaScript, making it easier to catch errors early in development...TypeScript adds static typing to JavaScript, making it easier to catch errors early in development...TypeScript adds static typing to JavaScript, making it easier to catch errors early in development...TypeScript adds static typing to JavaScript, making it easier to catch errors early in development...TypeScript adds static typing to JavaScript, making it easier to catch errors early in development...TypeScript adds static typing to JavaScript, making it easier to catch errors early in development...TypeScript adds static typing to JavaScript, making it easier to catch errors early in development...TypeScript adds static typing to JavaScript, making it easier to catch errors early in development...TypeScript adds static typing to JavaScript, making it easier to catch errors early in development...TypeScript adds static typing to JavaScript, making it easier to catch errors early in development...TypeScript adds static typing to JavaScript, making it easier to catch errors early in development...TypeScript adds static typing to JavaScript, making it easier to catch errors early in development...TypeScript adds static typing to JavaScript, making it easier to catch errors early in development...TypeScript adds static typing to JavaScript, making it easier to catch errors early in development...TypeScript adds static typing to JavaScript, making it easier to catch errors early in development...TypeScript adds static typing to JavaScript, making it easier to catch errors early in development...TypeScript adds static typing to JavaScript, making it easier to catch errors early in development...TypeScript adds static typing to JavaScript, making it easier to catch errors early in development...TypeScript adds static typing to JavaScript, making it easier to catch errors early in development...",
         "imageUrl": "https://picsum.photos/seed/post2/800/400",
         "publishedDate": "2024-02-21",
         "viewCount": 234,
-        "readingTime": 7,
+        "main": true,
         "tags": ["TypeScript", "JavaScript", "Programming"]
       },
       {
@@ -30,8 +29,17 @@
         "imageUrl": "https://picsum.photos/seed/post3/800/400",
         "publishedDate": "2024-02-20",
         "viewCount": 189,
-        "readingTime": 6,
         "tags": ["SCSS", "CSS", "Web Design"]
+      },
+      {
+        "id": 4,
+        "title": "Getting Started with Next.js Development",
+        "description": "Learn the basics of Next.js and how to create your first application with this powerful React framework.2",
+        "content": "Next.js is a powerful framework for building React applications that provides features like server-side rendering and static site generation out of the box...",
+        "imageUrl": "https://picsum.photos/seed/post1/800/400",
+        "publishedDate": "2025-02-22",
+        "viewCount": 156,
+        "tags": ["Next.js", "React", "Web Development, Vue.js, Angular"]
       }
     ]
   }

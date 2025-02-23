@@ -11,7 +11,7 @@ export const Footer: FC = () => {
 
   const renderLink = (link: LinkItem): JSX.Element => (
     <li className='footer__link-wrap' key={link.href}>
-      <Link href={link.href} className="footer__link">
+      <Link href={link.href} className="footer__link hover">
         {link.label}
       </Link>
     </li>
@@ -32,13 +32,13 @@ export const Footer: FC = () => {
             <address className="footer__contact">
               <p>
                 <strong>Email: </strong>
-                <a href="mailto:info@template.net" className="footer__link">
+                <a href="mailto:info@template.net" className="footer__link hover">
                   info@template.net
                 </a>
               </p>
               <p>
                 <strong>Phone: </strong>
-                <a href="tel:+18102456789" className="footer__link">
+                <a href="tel:+18102456789" className="footer__link hover">
                   +1 810 234 5678
                 </a>
               </p>
@@ -91,17 +91,17 @@ export const Footer: FC = () => {
           </div>
           <ul className="footer__legal-list" aria-label="Legal links">
             <li>
-              <Link href="/terms" className="footer__link">
+              <Link href="/terms" className="footer__link hover">
                 Terms of Use
               </Link>
             </li>
             <li>
-              <Link href="/privacy" className="footer__link">
+              <Link href="/privacy" className="footer__link hover">
                 Privacy Policy
               </Link>
             </li>
             <li>
-              <Link href="/cookie" className="footer__link">
+              <Link href="/cookie" className="footer__link hover">
                 Cookie Policy
               </Link>
             </li>

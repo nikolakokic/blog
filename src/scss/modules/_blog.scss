@@ -1,0 +1,84 @@
+@use "../abstracts/" as *;
+
+.blog {
+    margin-bottom: 80px;
+}
+
+.blog-grid__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+   @include media-breakpoint-between(md,xl) {
+    grid-template-columns: repeat(2, 1fr);
+   }
+   @include media-breakpoint-up(xl) {
+    grid-template-columns: repeat(3, 1fr);
+   }
+}
+
+.post__image-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.blog-grid__item {
+    border: 1px solid $grey-main;
+    border-radius: 12px;
+    padding: 15px 15px 20px 15px;
+}
+
+.post__tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.post__tag-item {
+    padding: 4px 10px;
+    margin: 0 10px 10px 0;
+    background-color: rgba($blue-medium, 0.2);
+    border-radius: 6px;
+    color: $blue-medium;
+}
+
+.post__tag {
+    font-size: 14px;
+}
+
+.post__title {
+    font-size: 20px;
+    margin-bottom: 20px;
+    @include media-breakpoint-up(md){
+        font-size: 24px;
+    }
+}
+
+.post__description {
+    margin-bottom: 20px;
+    color: $grey-text;
+}
+
+.post__date {
+    display: block;
+    margin-bottom: 5px;
+    color: $manatee;
+}
+
+.post__reading-time {
+    color: $manatee;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.post__link {
+    display: inline-block;
+    color: $blue-medium;
+}
+
+.blog__latest-title {
+    margin-bottom: 30px;
+}

@@ -43,6 +43,10 @@
 .footer__contact {
     font-style: normal;
     color: $tuna;
+    .footer__link {
+        display: inline-block;
+        margin-bottom: 5px;
+    }
 }
 
 .footer__link-wrap {
@@ -61,6 +65,10 @@
         margin-bottom: 10px;
         text-align: center;
     }
+}
+
+.newsletter-form {
+    text-align: center;
 }
 
 .newsletter-form__description {
@@ -107,6 +115,12 @@
     color: $white;
     font-size: 16px;
     font-family: $font-default;
+    transition: opacity $duration-medium $ease-in-out;
+    @include media-breakpoint-up(xl) {
+        &:hover {
+            opacity: 0.8;
+        }
+    }
 }
 
 .footer__bottom {
