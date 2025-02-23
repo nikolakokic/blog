@@ -2,6 +2,7 @@
 
 import { FC, FormEvent, ChangeEvent, useState } from 'react';
 import { FormState, NewsletterFormProps } from './footer.types';
+import { EmailEnvelopeIcon } from './icons';
 
 
 export const NewsletterForm: FC<NewsletterFormProps> = ({
@@ -61,6 +62,9 @@ export const NewsletterForm: FC<NewsletterFormProps> = ({
           aria-required="true"
           disabled={formState.isSubmitting}
         />
+        <span className='newsletter-form__group-icon' aria-hidden="true">
+          <EmailEnvelopeIcon />
+        </span>
       </div>
       {formState.error && (
         <p className="newsletter-form__error" role="alert">

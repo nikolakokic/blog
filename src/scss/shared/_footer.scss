@@ -73,6 +73,7 @@
     width: 100%;
     height: 48px;
     margin-bottom: 10px;
+    position: relative;
     input {
         width: 100%;
         height: 100%;
@@ -80,12 +81,20 @@
         outline: none;
         border-radius: 6px;
         background-color: transparent;
-        padding: 0 15px;
+        padding: 0 45px 0 15px;
         font-family: $font-default;
     }
     @include media-breakpoint-up(md) {
         width: 320px;
     }
+}
+
+.newsletter-form__group-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    display: flex;
+    transform: translateY(-50%);
 }
 
 .newsletter-form__button {
