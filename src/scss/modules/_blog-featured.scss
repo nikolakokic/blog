@@ -49,10 +49,9 @@
 .featured-post__tag-item {
     padding: 4px 10px;
     margin: 0 10px 10px 0;
-    background-color: rgba($blue-medium, 0.2);
+    background-color: $blue-medium;
+    color: $white;
     border-radius: 6px;
-    @include theme-transition;
-    color: var(--tags);
 }
 
 .featured-post__tag {
@@ -61,8 +60,14 @@
 
 .featured-post__title {
     margin-bottom: 25px;
+    font-size: 30px;
+    line-height: 30px;
     @include theme-transition;
     color: var(--text-primary);
+    @include media-breakpoint-up(md) {
+        font-size: 40px;
+        line-height: 40px;
+    }
 }
 
 .featured-post__reading-time {
