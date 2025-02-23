@@ -4,8 +4,9 @@ import { JSX, useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { NAVIGATION } from './navigation-items';
-import { Button } from '../button/Button';
+
 import { SearchIcon, SunIcon } from './icons';
+import { Button } from '@/components/common/button/Button';
 
 export const Header = (): JSX.Element => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
