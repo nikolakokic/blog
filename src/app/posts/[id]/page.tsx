@@ -26,27 +26,29 @@ export async function generateMetadata(props: {
 
 async function getPost(id: string) {
   try {
-    const res = await fetch(`http://localhost:3001/posts`, {
-      cache: 'no-store'
+    const res = await fetch(`http://localhost:3001/posts/${id}`, {
+      cache: 'no-store',
+      headers: {
+        'Accept': 'application/json'
+      }
     });
 
     if (!res.ok) {
-      throw new Error('Failed to fetch posts');
+      if (res.status === 404) {
+        return notFound();
+      }
+      throw new Error(`HTTP error! status: ${res.status}`);
     }
 
-    const posts = await res.json();
-    const post = posts.find((p: BlogPost) => p.id === parseInt(id));
-
-    if (!post) {
-      return notFound();
-    }
+    const post = await res.json();
 
     return {
       ...post,
       readingTime: calculateReadingTime(post.content)
     };
   } catch (error) {
-    throw new Error(`Failed to fetch post ${error}` );
+    console.error('Error fetching post:', error);
+    throw error;
   }
 }
 
