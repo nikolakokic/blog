@@ -1,3 +1,4 @@
+"use client"
 import { FC, JSX } from 'react';
 import Link from 'next/link';
 
@@ -5,13 +6,15 @@ import { LinkItem } from './footer.types';
 import { categories, quickLinks } from './quic-links';
 import { NewsletterForm } from './NewsletterFrom';
 import Image from 'next/image';
+import { useTheme } from '@/context/ThemeContext';
 
 export const Footer: FC = () => {
+  const { isDarkMode } = useTheme();
   const currentYear: number = new Date().getFullYear();
 
   const renderLink = (link: LinkItem): JSX.Element => (
     <li className='footer__link-wrap' key={link.href}>
-      <Link href={link.href} className="footer__link">
+      <Link href={link.href} className="footer__link hover">
         {link.label}
       </Link>
     </li>
@@ -32,13 +35,13 @@ export const Footer: FC = () => {
             <address className="footer__contact">
               <p>
                 <strong>Email: </strong>
-                <a href="mailto:info@template.net" className="footer__link">
+                <a href="mailto:info@template.net" className="footer__link hover">
                   info@template.net
                 </a>
               </p>
               <p>
                 <strong>Phone: </strong>
-                <a href="tel:+18102456789" className="footer__link">
+                <a href="tel:+18102456789" className="footer__link hover">
                   +1 810 234 5678
                 </a>
               </p>
@@ -73,7 +76,7 @@ export const Footer: FC = () => {
           <div className="footer__brand">
             <Link href="/" className="footer__logo" aria-label="MetaBlog home">
                 <Image
-                   src="/images/logo-small.png"
+                   src={isDarkMode ? "/images/logo-small-white.png" : "/images/logo-small.png"}
                    alt="NiceBlog Logo"
                    width={48}
                    height={48}
@@ -91,17 +94,17 @@ export const Footer: FC = () => {
           </div>
           <ul className="footer__legal-list" aria-label="Legal links">
             <li>
-              <Link href="/terms" className="footer__link">
+              <Link href="/terms" className="footer__link hover">
                 Terms of Use
               </Link>
             </li>
             <li>
-              <Link href="/privacy" className="footer__link">
+              <Link href="/privacy" className="footer__link hover">
                 Privacy Policy
               </Link>
             </li>
             <li>
-              <Link href="/cookie" className="footer__link">
+              <Link href="/cookie" className="footer__link hover">
                 Cookie Policy
               </Link>
             </li>

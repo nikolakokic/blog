@@ -26,9 +26,6 @@
   }
 }
 
-// example: @include align(absolute, xy); for centering both axis'
-// default @include align(); will be relative on x axis
-
 //	Visually hidden mixin for accessibility
 @mixin visually-hidden() {
   border: 0;
@@ -41,18 +38,6 @@
   width: 1px;
 }
 
-// Hover mixin only for desktop devices
-// to include use @include hover {your hover styles} can also include elements
-@mixin hover {
-  @media (hover: hover) and (pointer: fine) {
-    .no-touch &:hover {
-      @content;
-    }
-  }
-}
-
-// Focus mixin - focus state visible only when tabbing is active
-// to include use @include focus {your focus styles} can also include elements
 @mixin focus {
   @media only screen and (min-width: 1200px) {
     .active-focus &:focus {
@@ -61,25 +46,10 @@
   }
 }
 
-// ----------  Fonts import
-// ------------------------------------------------------------------------------
-
-// usage: @include webFont(Helvetica, HelveticaNeueLTStd-Th, 100);
-// in mixin call add three parameters (font name, font file name, font-weight, [font-style])
-$path: "../assets/fonts" !default;
-
-@mixin webFont($name, $file, $weight, $style: "normal") {
-  @font-face {
-    font-family: "#{$name}";
-    src: url("#{$path}/#{$file}.woff2") format("woff2"),
-      url("#{$path}/#{$file}.woff") format("woff");
-    font-weight: #{$weight};
-    @if ($style != "normal") {
-      font-style: #{$style};
-    } @else {
-      font-style: normal;
-    }
-  }
+@mixin theme-transition {
+  transition: background-color 0.3s ease-in-out,
+              color 0.3s ease-in-out,
+              border-color 0.3s ease-in-out;
 }
 
 // ----------  Animation mixin

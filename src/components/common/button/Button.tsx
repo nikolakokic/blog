@@ -5,7 +5,6 @@ export const Button: FC<ButtonProps> = ({
   children,
   className,
   onClick,
-  isActive,
   ariaLabel,
   ariaExpanded,
   ...props

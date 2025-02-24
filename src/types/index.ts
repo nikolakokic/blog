@@ -1,5 +1,5 @@
 export interface BlogPost {
-    id: number;
+    id: string;
     title: string;
     description: string;
     content: string;
@@ -7,9 +7,6 @@ export interface BlogPost {
     publishedDate: string;
     viewCount: number;
     readingTime: number;
-    tags?: string[];
-  }
-  
-  export interface BlogCardProps {
-    post: BlogPost;
+    tags: string[];
+    main: boolean;
   }
