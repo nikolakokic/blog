@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 import { calculateReadingTime } from '@/lib/utils';
 
 import type { Metadata } from 'next'
-import { ViewCounter } from '@/components/feature/viewCounter/VIewCounter';
+import { ViewCounter } from '@/components/feature/viewCounter/ViewCounter';
 
 
 export async function generateMetadata(props: {
