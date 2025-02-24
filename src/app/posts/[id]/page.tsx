@@ -4,6 +4,8 @@ import { notFound } from 'next/navigation';
 import { calculateReadingTime } from '@/lib/utils';
 
 import type { Metadata } from 'next'
+import { ViewCounter } from '@/components/feature/viewCounter/VIewCounter';
+
 
 export async function generateMetadata(props: {
   params: Promise<{ id: string }>;
@@ -61,7 +63,6 @@ export default async function SinglePostPage(props: {
   return (
     <article className="single-post">
       <div className="wrapper">
-
         <div className="single-post__header">
           <div className="single-post__meta">
             {post.tags && (
@@ -79,6 +80,7 @@ export default async function SinglePostPage(props: {
                 {new Date(post.publishedDate).toLocaleDateString()}
               </time>
               <span className='single-post__reading'>{post.readingTime} min read</span>
+            <ViewCounter postId={post.id} />
             </div>
           </div>
         </div>
